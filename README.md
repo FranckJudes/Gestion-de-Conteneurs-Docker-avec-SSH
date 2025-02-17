@@ -19,7 +19,7 @@ Si Docker n'est pas installé, consultez la documentation officielle : [https://
 ## Utilisation
 Le script accepte plusieurs options en ligne de commande :
 ```bash
-./script.sh [-c <nombre_de_conteneurs>] [-d] [-r <nom_du_conteneur>] [-i]
+./generator.sh [-c <nombre_de_conteneurs>] [-d] [-r <nom_du_conteneur>] [-i]
 ```
 
 ### Options
@@ -33,25 +33,25 @@ Le script accepte plusieurs options en ligne de commande :
 ### Exemples
 #### 1. Créer 3 conteneurs Docker avec SSH
 ```bash
-./script.sh -c 3
+./generator.sh -c 3
 ```
 Chaque conteneur aura un accès SSH et sera accessible sur un port spécifique (`2201`, `2202`, `2203`, etc.).
 
 #### 2. Supprimer tous les conteneurs créés
 ```bash
-./script.sh -d
+./generator.sh -d
 ```
 Cette commande supprime tous les conteneurs créés par le script ainsi que l'image Docker utilisée.
 
 #### 3. Supprimer un conteneur spécifique
 ```bash
-./script.sh -r conteneur_2
+./generator.sh -r conteneur_2
 ```
 Cette commande supprime uniquement le conteneur nommé `conteneur_2`.
 
 #### 4. Afficher les adresses IP des conteneurs actifs
 ```bash
-./script.sh -i
+./generator.sh -i
 ```
 Cela listera les noms des conteneurs ainsi que leurs adresses IP internes.
 
